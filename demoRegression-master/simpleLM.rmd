@@ -13,9 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 bears <- read.csv(file="BEARS.csv",header = TRUE)
-#adjust factors to be factors
+bears$AGE<- as.factor(bears$AGE)
 bears$SEX<- as.factor(bears$SEX)
-bears$MONTH<- as.factor(bears$MONTH)
 ```
 
 ## Model LENGTH ~ NECK  this is an example  
@@ -33,3 +32,4 @@ the adjusted rsquared is 0.7476.
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+All the models that predict Length from worst to best are, AGE, MONTH, SEX, HEADLEN, HEADWITH, NECK.
