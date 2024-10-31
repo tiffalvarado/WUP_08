@@ -56,6 +56,26 @@ The adjusted rsquared for LENGTH ~ HEADLEN is 0.8434.
 ## Model LENGTH ~ HEADWTH this is an example
 
 
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+The rsquared for LENGTH ~ HEADWTH is 0.5321.
+
+## Model LENGTH ~ CHEST this is an example
+
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+The adjusted rsquared for LENGTH ~ CHEST is 0.7869.
+
+
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
