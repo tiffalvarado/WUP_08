@@ -29,7 +29,19 @@ summary.lm(simp)
 
 
 
-the adjusted rsquared is 0.7476.
+the adjusted r-squared is 0.7476 for LENGTH ~ NECK.
+
+
+## Model LENGTH ~ AGE this is an example
+
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r-squared for LENGTH ~ AGE is 0.5073.
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
